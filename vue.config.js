@@ -7,12 +7,14 @@ const webpack = require('webpack');
 
 module.exports = {
   transpileDependencies: ['vuetify'],
+
   pages: {
     index: {
       entry: 'src/main.js',
       title: '5e Loot Generator',
     },
   },
+
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
@@ -33,5 +35,12 @@ module.exports = {
       ],
     },
   },
+
   publicPath: process.env.NODE_ENV === 'production' ? '/loot-gen/' : '/',
+
+  pluginOptions: {
+    vuetify: {
+			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
+		}
+  }
 };
