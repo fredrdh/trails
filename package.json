@@ -1,12 +1,13 @@
 {
-
+  "type": "commonjs",
+  "sourceType": "module",
   "name": "5e-loot-gen",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --skip-plugins @vue/cli-plugin-eslint"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -20,12 +21,13 @@
     "roboto-fontface": "*",
     "slugify": "^1.6.6",
     "uuid": "^9.0.1",
-    "vue": "^3.3.13",
+    "vue": "^2.7.16",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.8",
     "vuex": "^4.1.0",
     "webfontloader": "^1.0.0",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
@@ -65,5 +67,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "Live site: https://ebshimizu.github.io/loot-gen/",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredrdh/trails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredrdh/trails/issues"
+  },
+  "homepage": "https://github.com/fredrdh/trails#readme"
 }

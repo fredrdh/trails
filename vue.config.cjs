@@ -10,7 +10,7 @@ module.exports = {
 
   pages: {
     index: {
-      entry: 'src/main.js',
+      entry: 'src/main.cjs',
       title: '5e Loot Generator',
     },
   },

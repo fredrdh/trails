@@ -1,3 +1,11 @@
+return browserify({ ... })
+  .transform(babelify.configure({
+    presets: ["es2015"]
+  }))
+
+import {Spinner} from 'spin.js';
+window.Spinner = Spinner;
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
