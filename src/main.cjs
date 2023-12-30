@@ -1,10 +1,26 @@
-return browserify({ ... })
-  .transform(babelify.configure({
-    presets: ["es2015"]
-  }))
+require("@babel/parser").parse("code", {
+  // parse in strict mode and allow module declarations
+  sourceType: "module",
 
-import {Spinner} from 'spin.js';
-window.Spinner = Spinner;
+  plugins: [
+    // enable jsx and flow syntax
+    "jsx",
+    "flow",
+  ],
+});
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+};
+
+/* const createApp = require('vue'); */
+
 
 import { createApp } from 'vue'
 import App from './App.vue'
